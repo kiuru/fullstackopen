@@ -1,0 +1,10 @@
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+palvelin-->selain: HTTP 201 Created
+
+note over selain:
+Lähetettiin uusi POST request, jonka body:ssa lähti JSON-formaatissa sisältö:
+{"content":"Minun uusi muistiinpano","date":"2019-07-07T16:52:01.533Z"}
+
+Samalla selain päivittää esillä olevaan listaan uuden lisätyn muistiinpanon,
+eikä se tämän vuoksi vaadi uuden requestin tekemistä palvelimelle.
+end note
