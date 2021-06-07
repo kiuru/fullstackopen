@@ -1,16 +1,10 @@
 import React from 'react'
 import Header from './Header.js'
 import Content from './Content.js'
-  
-  const Total = (props) => (
-    <p>Number of exercises {props.total}</p>
-  )
 
 const Course = ({course}) => {
-    let total = 0
-    course.parts.map(part => 
-        total += parseInt(part.exercises)
-    )
+    const total = course.parts.reduce( (s, p) => parseInt(s) + parseInt(p.exercises), 0)
+    
     return (
         <div>
             <Header course={course.name} />
